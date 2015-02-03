@@ -9,7 +9,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+	$content_width = 600; /* pixels */
 }
 
 if ( ! function_exists( 'firethorne_base_setup' ) ) :
@@ -46,7 +46,7 @@ function firethorne_base_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -66,14 +66,14 @@ function firethorne_base_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
+		'aside'
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'firethorne_base_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+//	add_theme_support( 'custom-background', apply_filters( 'firethorne_base_custom_background_args', array(
+//		'default-color' => 'ffffff',
+//		'default-image' => '',
+//	) ) );
 }
 endif; // firethorne_base_setup
 add_action( 'after_setup_theme', 'firethorne_base_setup' );
@@ -101,7 +101,13 @@ add_action( 'widgets_init', 'firethorne_base_widgets_init' );
  */
 function firethorne_base_scripts() {
 	wp_enqueue_style( 'firethorne-base-style', get_stylesheet_uri() );
-
+        
+        wp_enqueue_style( 'firethorne-base-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css'  );
+        
+        wp_enqueue_style( 'firethorne-base-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,400italic,700,900,900italic|PT+Serif:400,700,400italic,700italic' );
+                    
+        wp_enqueue_style('firethorne-base-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+                
 	wp_enqueue_script( 'firethorne-base-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'firethorne-base-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -115,7 +121,7 @@ add_action( 'wp_enqueue_scripts', 'firethorne_base_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
