@@ -113,6 +113,8 @@ function firethorne_base_scripts() {
         
         wp_enqueue_script( 'firethorne-base-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('firethorne-base-superfish'), '20150203', true );
         
+        wp_enqueue_script( 'firethorne-base-hide-search', get_template_directory_uri() . '/js/hide-search.js', array('jquery'), '20150204', true );
+        
         wp_enqueue_script( 'firethorne-base-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
         
 	wp_enqueue_script( 'firethorne-base-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

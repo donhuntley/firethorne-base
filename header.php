@@ -45,8 +45,19 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( '<i class="fa fa-bars fa-lg"></i>', 'firethorne-base' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                        
+                        <div class="search-toggle">
+                            <i class="fa fa-search"></i>
+                            <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'firethorne-base' ); ?></a>
+                        </div>
+                            
                         <?php firethorne_base_social_menu(); ?> 
 		</nav><!-- #site-navigation -->
+                <div id="search-container" class="search-box-wrapper clear">
+                    <div class="search-box clear">
+                        <?php get_search_form(); ?>
+                    </div>
+                </div> 
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
