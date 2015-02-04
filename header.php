@@ -45,6 +45,7 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( '<i class="fa fa-bars fa-lg"></i>', 'firethorne-base' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                        <?php firethorne_base_social_menu(); ?> 
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
