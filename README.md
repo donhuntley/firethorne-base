@@ -3,4 +3,4 @@
 Firethorne Base
 ===
 
-Fully responsive theme based on _s, with help from Morten Rand-Hendriksen 
+Fully responsive WordPress theme based on _s and many ideas from Morten Rand-Hendriksen 
