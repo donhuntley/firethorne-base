@@ -1507,7 +1507,12 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	padding: 0.8075em 1em;
+        font-size: 14px;
+        font-size: 1.4rem;
+        font-family: 'Lato', sans-serif;
+        background: #e5e5e5;
+        background: hsl(0, 0%, 90%);
 }
 
 /*--------------------------------------------------------------
