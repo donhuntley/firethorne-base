@@ -911,7 +911,7 @@ X.X Heading
 }  
 
 .site-branding {
-    padding: 3rem 0;
+    padding: 1rem 0;
     text-align: center;
     background: #68024e;
     background: hsl(315, 98%, 22%);
@@ -1349,7 +1349,28 @@ input[type="search"] {
 	clear: both;
 	margin: 0 0 1.5em;
 }
-
+@media screen and (min-width: 1320px){
+    .single .entry-meta {
+        width: 120px;
+        margin-left: -160px;
+        float: left;
+        text-align: right;
+    }
+    
+    .single .byline,
+    .single .posted-on {
+        display: block;
+        margin-bottom: 1em;
+    }
+}
+@media screen and (max-width: 1319px){
+    .posted-on:before {
+        content: ' on ';
+    }
+    .posted-on:after {
+        content: '.';
+    }
+}
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
