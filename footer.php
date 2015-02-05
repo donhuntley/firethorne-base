@@ -11,10 +11,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+            <?php get_sidebar('footer'); ?>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'firethorne-base' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'firethorne-base' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'firethorne-base' ), 'firethorne-base', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s', 'firethorne-base' ), 'Firethorne Base', '<a href="http://github.com/donhuntley/" rel="designer">Firethorne Design</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
