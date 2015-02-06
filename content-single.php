@@ -25,7 +25,7 @@
                         <?php 
                             if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) { 
                                 echo '<span class="comments-link">';
-                                comments_popup_link( __( 'Leave a comment', 'my-simone' ), __( '1 Comment', 'my-simone' ), __( '% Comments', 'firethorne-base' ) );
+                                comments_popup_link( __( 'Leave a comment', 'firethorne-base' ), __( '1 Comment', 'firethorne-base' ), __( '% Comments', 'firethorne-base' ) );
                                 echo '</span>';
                             }
                         ?>
@@ -47,6 +47,6 @@
                 <?php
                     echo get_the_tag_list( '<ul><li><i class="fa fa-tag"></i>', '</li><li><i class="fa fa-tag"></i>', '</li></ul>' );
                 ?>
-		<?php edit_post_link( __( 'Edit', 'firethorne-base' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'firethorne-base' ), '<span class="edit-link">', '</span>' ); ?>               
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

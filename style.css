@@ -29,6 +29,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 5.0 Navigation
 	5.1 Links
 	5.2 Menus
+        5.3 Post navigation
 6.0 Accessibility
 7.0 Alignments
 8.0 Clearings
@@ -783,14 +784,15 @@ a:active {
         padding-right: .5em;
     }
 }
-
+/*
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }
-
+*/
+/*
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -804,6 +806,60 @@ a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+*/
+/*--------------------------------------------------------------
+5.3 Post navigation
+--------------------------------------------------------------*/
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+        font-size: 16px;
+        font-size: 1.6rem;
+        font-family: 'Lato', sans-serif;
+        color: #000;
+        color: hsl(0, 0%, 0%);
+}
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	width: 50%;
+        float: left;
+        padding-right: 15%;
+}
+
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+        width: 50%;	
+        float: right;
+        padding-left: 15%;
+	text-align: right;
+}
+
+.nav-indicator { 
+    margin-bottom: 1em; 
+}
+
+.nav-previous h1,
+.nav-next h1 { 
+    font-weight: 900;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+.post-nav-box {
+    padding: 2em 0;
+    margin-bottom: 4em;
+    border-top: hsl(0, 0%, 80%) solid 1px;
+    border-bottom: hsl(0, 0%, 80%) solid 1px; 
 }
 
 /*--------------------------------------------------------------
@@ -1329,7 +1385,7 @@ input[type="search"] {
 }
 
 .entry-footer a {
-    margin-left: .5rem;
+ //   margin-left: .5rem;
 }
 
 

@@ -52,14 +52,48 @@ function the_post_navigation() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation" role="navigation">
+        <nav class="navigation post-navigation" role="navigation">         
 		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'firethorne-base' ); ?></h2>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
+                                
+                                previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
 				next_post_link( '<div class="nav-next">%link</div>', '%title' );
+                                
+                                
 			?>
 		</div><!-- .nav-links -->
+
+	</nav><!-- .navigation -->
+	<?php
+}
+endif;
+
+if ( ! function_exists( 'firethorne_base_post_nav' ) ) :
+/**
+ * Display navigation to next/previous post when applicable.
+ *
+ * @return void
+ */
+function firethorne_base_post_nav() {
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+
+	if ( ! $next && ! $previous ) {
+		return;
+	}
+	?>
+	<nav class="navigation post-navigation" role="navigation">
+            <div class="post-nav-box clear">
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'firethorne-base' ); ?></h1>
+		<div class="nav-links">
+			<?php
+				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . __( 'Previous Post:', 'firethorne-base' ) . '</div><h1>%link</h1></div>', '%title' );
+				next_post_link(     '<div class="nav-next"><div class="nav-indicator">' . __( 'Next Post:', 'firethorne-base' ) . '</div><h1>%link</h1></div>', '%title' );
+			?>
+		</div><!-- .nav-links -->
+            </div><!-- .post-nav-box -->
 	</nav><!-- .navigation -->
 	<?php
 }

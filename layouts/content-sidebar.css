@@ -37,6 +37,12 @@ Layout: Content-Sidebar
     padding: 0 4rem;
     margin: 0 auto;
 }
+
+.post-navigation  {
+    padding: 0;
+}
+
+
 @media screen and (min-width: 1540px) {
     .content-area {
         float: left;
