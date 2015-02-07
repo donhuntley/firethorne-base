@@ -1490,12 +1490,79 @@ blockquote.alignright {
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
+.comments-title {
+    font-weight: 900;
+    font-size: 36px;
+    font-size: 3.6rem;
+}
+.comments-area > ol {
+    padding: 0;
+    margin: 2em 0;
+    list-style-type: none;
+}
+
+ol.children { list-style-type: none; }
+
+.comment-list ol { margin-left: 50px; }
+
+.comment-meta { margin-bottom: 1em; }
+
+.comment-author .avatar {
+    width: 50px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+}
+
+.comment-author .fn {
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+.comment-metadata {
+    font-size: 14px;
+    font-size:1.4rem;
+}
+
+.comment-content { font-size: 90%; }
+
+.comment-content,
+.reply { margin-left: 70px; }
+
+.comment-body {
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: solid hsl(0, 0%, 80%) 1px;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
 
+.comment-content ol { margin-left: 1.5em; }
+
+.reply {
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+
 .bypostauthor {
 	display: block;
+}
+
+/* Comments responsive */
+@media screen and (max-width:600px) {    
+    .comment-list ol { margin-left: 0; }
+    
+    .comment-content ol { margin-left: 1.5em; }
+    
+    .comment-content,
+    .reply { margin-left: 0; }
 }
 
 /*--------------------------------------------------------------
