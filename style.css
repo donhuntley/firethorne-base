@@ -1418,12 +1418,17 @@ input[type="search"] {
         margin-bottom: 1em;
     }
 }
-@media screen and (max-width: 1319px){
-    .posted-on:before {
-        content: ' on ';
-    }
-    .posted-on:after {
-        content: '.';
+.posted-on:before {
+    content: ' on ';
+}
+.posted-on:after {
+    content: '.';
+}
+
+@media screen and (min-width: 1320px) {
+    .single .posted-on:before,
+    .single .posted-on:after {
+        content: '';
     }
 }
 
