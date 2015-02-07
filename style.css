@@ -784,30 +784,6 @@ a:active {
         padding-right: .5em;
     }
 }
-/*
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-*/
-/*
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-*/
 /*--------------------------------------------------------------
 5.3 Post navigation
 --------------------------------------------------------------*/
@@ -862,6 +838,16 @@ a:active {
     border-bottom: hsl(0, 0%, 80%) solid 1px; 
 }
 
+.comment-navigation {
+    padding: 1em 0;
+    margin: 3em 0;
+    border-top: hsl(0, 0%, 80%) solid 1px;
+    border-bottom: hsl(0, 0%, 80%) solid 1px;  
+}
+
+.comment-navigation i {
+    margin: 0 1em;
+}
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
