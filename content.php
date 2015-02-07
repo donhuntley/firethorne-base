@@ -25,23 +25,10 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'firethorne-base' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-		?>
-
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'firethorne-base' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
+             <?php the_excerpt(); ?>
+	<footer class="entry-footer continue-reading">
+            <?php echo '<a href="' . get_permalink() . '" title="' . __('Continue Reading ', 'firethorne-base') . get_the_title() . '" rel="bookmark">Continue Reading<i class="fa fa-arrow-circle-o-right"></i></a>'; ?>
+        </footer><!-- .entry-footer -->
 		
 	</footer><!-- .entry-footer -->
     </div><!-- .index-box -->
