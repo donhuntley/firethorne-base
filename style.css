@@ -1551,8 +1551,12 @@ ol.children { list-style-type: none; }
 }
 
 
-.bypostauthor {
-	display: block;
+.bypostauthor > .comment-body {
+    position: relative;
+    padding: 1em;
+    margin-bottom: 2em;
+    background: hsl(0, 0%, 93%);
+    border: none;
 }
 
 /* Comments responsive */
