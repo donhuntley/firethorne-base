@@ -30,6 +30,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	5.1 Links
 	5.2 Menus
         5.3 Post navigation
+        5.4 Index page navigation
 6.0 Accessibility
 7.0 Alignments
 8.0 Clearings
@@ -850,6 +851,34 @@ a:active {
     margin: 0 1em;
 }
 /*--------------------------------------------------------------
+5.4 Index page navigation
+--------------------------------------------------------------*/
+.paging-navigation ul {
+    margin: 0;
+}
+
+.paging-navigation li { display: inline; }
+
+a.page-numbers,
+span.page-numbers {
+     padding: .3em .7em;
+     color: #333;
+     color: hsl(0, 0%, 20%);
+}
+
+a:hover.page-numbers {
+    color: #000;
+    color: hsl(0, 0%, 0%);
+}
+
+.paging-navigation .current {
+    font-weight: bold;
+    color: #000;
+    color: hsl(0, 0%, 0%);
+}
+
+
+/*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
@@ -1485,7 +1514,7 @@ blockquote.alignright {
         padding: 1em 1.5em 0;   
     }
 }
------------------------------------------------------------
+/*-----------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,

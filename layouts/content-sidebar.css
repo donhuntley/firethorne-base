@@ -104,4 +104,11 @@ Layout: Content-Sidebar
         float: none;
         margin: 1em auto 0;
     }
-}             
+} 
+.paging-navigation {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    list-style-type: none;
+    background: #fff;
+} 
