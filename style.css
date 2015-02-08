@@ -1628,7 +1628,8 @@ ol.children { list-style-type: none; }
 
 .required { color: red; }
 
-.comment-awaiting-moderation { /* Green background color to make moderation seem less aggressive */
+/* Green background color to make moderation seem less aggressive */
+.comment-awaiting-moderation { 
     padding: .5rem 1rem;
     margin: 1rem 0;
     font-family: 'Lato', sans-serif;
@@ -1657,7 +1658,12 @@ ol.children { list-style-type: none; }
 .entry-content .continue-reading a {
     text-decoration: none;
 }
-  
+
+.sticky-post {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+}
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll
