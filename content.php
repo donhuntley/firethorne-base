@@ -47,6 +47,5 @@
             <?php echo '<a href="' . get_permalink() . '" title="' . __('Continue Reading ', 'firethorne-base') . get_the_title() . '" rel="bookmark">Continue Reading<i class="fa fa-arrow-circle-o-right"></i></a>'; ?>
         </footer><!-- .entry-footer -->
 		
-	</footer><!-- .entry-footer -->
     </div><!-- .index-box -->
 </article><!-- #post-## -->
