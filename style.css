@@ -1662,7 +1662,18 @@ ol.children { list-style-type: none; }
     top: 1rem;
     right: 3rem;
 }
-
+.page-header {
+    font-weight: bold;
+}
+.taxonomy-description {
+    padding-top: 2rem;
+    margin: 2rem 0;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    border-top: 1px solid hsl(0, 0%, 75%);
+    border-bottom: 1px solid hsl(0, 0%, 75%);
+}
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/

@@ -43,7 +43,7 @@
                 /* translators: used between list items, there is a space after the comma */
                 $category_list = get_the_category_list( __( ', ', 'firethorne-base' ) );
 
-                if ( firethorne_base_categorized_blog() && !is_front_page() ) {
+                if ( firethorne_base_categorized_blog() ) {
                     echo '<div class="category-list">' . $category_list . '</div>';
                 }
             ?>
