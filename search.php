@@ -30,7 +30,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php firethorne_base_paging_nav(); ?>
 
 		<?php else : ?>
 

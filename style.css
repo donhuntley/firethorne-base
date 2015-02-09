@@ -1662,8 +1662,12 @@ ol.children { list-style-type: none; }
     top: 1rem;
     right: 3rem;
 }
-.page-header {
+.page-header,
+.page-header h1.page-title {
     font-weight: bold;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-family: 'Lato', sans-serif;
 }
 .taxonomy-description {
     padding-top: 2rem;
