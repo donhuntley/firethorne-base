@@ -21,7 +21,10 @@ if ( ! function_exists( 'firethorne_base_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function firethorne_base_setup() {
-
+        // This theme styles the visual editor to resemble the theme style.
+        $font_url = 'http://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,900,900italic|PT+Serif:400,700,400italic,700italic';
+        add_editor_style( array( 'inc/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
+                
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -115,7 +118,11 @@ add_action( 'widgets_init', 'firethorne_base_widgets_init' );
 function firethorne_base_scripts() {
 	wp_enqueue_style( 'firethorne-base-style', get_stylesheet_uri() );
         
-        wp_enqueue_style( 'firethorne-base-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css'  );
+        if (is_page_template('page-templates/page-nosidebar.php')) {
+            wp_enqueue_style( 'firethorne-base-layout-style' , get_template_directory_uri() . '/layouts/no-sidebar.css');
+            } else {
+            wp_enqueue_style( 'firethorne-base-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
+            }
         
         wp_enqueue_style( 'firethorne-base-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,400italic,700,900,900italic|PT+Serif:400,700,400italic,700italic' );
                     
